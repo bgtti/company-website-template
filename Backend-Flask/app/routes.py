@@ -72,6 +72,7 @@ def contact():
         sender = EMAIL_DEFAULT_SENDER,
         recipients = [EMAIL_ADDRESS]
     )
+    new_email.reply_to = email
     new_email.html = email_body
 
     try:

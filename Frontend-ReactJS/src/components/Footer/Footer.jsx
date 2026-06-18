@@ -11,15 +11,16 @@ function Footer() {
 
  return (
   <footer className="Footer">
-   <ul className="Footer-Nav">
-    <li>
-     <Link to="/privacy-policy">Privacy Policy</Link>
-    </li>
-    <li>
-     <Link to="/impressum">Impressum</Link>
-    </li>
-   </ul>
-   <div>
+   <p className="Footer-Nav">
+    <Link to="/privacy-policy">Privacy Policy</Link>
+
+    <span className="Footer-Separator">|</span>
+
+    <Link to="/impressum">Impressum</Link>
+   </p>
+
+   <div className="Footer-Copyright">
+    {/* <p>© 2026 Company Name. All rights reserved.</p> */}
     <p>2025 by</p>
     <a href="https://github.com/bgtti" target="_blank" rel="noopener noreferrer">
      <img src={GithubIcon} alt="github repo" />

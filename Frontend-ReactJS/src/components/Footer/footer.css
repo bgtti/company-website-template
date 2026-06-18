@@ -19,7 +19,7 @@
 }
 
 .Footer p {
- color: var(--Burgundy);
+ color: var(--Gray);
  display: flex;
  align-items: center;
  justify-content: center;
@@ -31,18 +31,34 @@
 
 .Footer img {
  height: 20px;
- filter: var(--BurgundyFilter);
+ filter: var(--GrayFilter);
 }
 
 .Footer-Nav {
  padding: 0;
  display: flex;
- flex-direction: column;
+ list-style: none;
+ padding: 0;
+ margin: 0;
 }
 
-.Footer-Nav>li>a {
- color: var(--Olive);
- text-decoration: none;
+
+.Footer-Nav>a,
+.Footer-Separator,
+.Footer-Copyright>* {
+ font-size: 14px;
+ cursor: default;
+}
+
+.Footer-Separator {
+ color: var(--LightGray);
+ font-size: 14px;
+ padding: 0 5px;
+}
+
+.Footer-Nav>a {
+ color: var(--Gray);
+ font-size: 14px;
  cursor: pointer;
 }
 

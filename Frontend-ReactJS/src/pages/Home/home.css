@@ -3,126 +3,128 @@ Source: Image by Bruno from Pixabay
 available at: https://pixabay.com/photos/spices-cook-spice-up-ingredients-3811731/
 */
 .Homepage-Image {
- position: relative;
+  position: relative;
 
- min-height: calc(100vh - 70px - 70px);
- width: 100%;
+  min-height: calc(100vh - 70px - 70px);
+  width: 100%;
 
- background-image: url("../../assets/images/homepage_picture.jpg");
- background-size: cover;
- background-repeat: no-repeat;
- background-position: 76%;
+  background-image: url("../../assets/images/homepage_picture.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 76%;
 
- display: flex;
- align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 /* Picture white filter */
 .Homepage-Image::before {
- content: "";
- position: absolute;
- inset: 0;
- background: rgba(255, 255, 255, 0.80);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.80);
 }
 
 .Homepage-Hero {
- position: relative;
- z-index: 1;
+  position: relative;
+  z-index: 1;
 
- max-width: 700px;
- padding: 0 10%;
+  max-width: 700px;
+  padding: 0 10%;
 }
 
 .Homepage-Hero h1 {
- font-family: 'SpaceGrotesk', sans-serif;
- font-size: clamp(2.5rem, 5vw, 5rem);
- font-weight: 700;
- color: #222831;
+  font-family: 'SpaceGrotesk', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 700;
+  color: #222831;
 
- border-left: 6px solid var(--Green);
- padding-left: 10px;
- margin-bottom: 1rem;
+  border-left: 6px solid var(--Green);
+  padding-left: 10px;
+  margin-bottom: 1rem;
 }
 
 .Homepage-Hero p {
- font-family: 'Inter', sans-serif;
- font-size: clamp(1.1rem, 2vw, 1.5rem);
- font-weight: 400;
- color: #393E46;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 400;
+  color: #393E46;
 
- line-height: 1.6;
+  line-height: 1.6;
 }
 
 /* BUTTONS */
 
 .Homepage-Hero-Buttons {
- display: flex;
- gap: 1rem;
- margin-top: 2rem;
- flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .Homepage-Hero-Buttons a {
- font-family: 'Inter', sans-serif;
- font-size: 1rem;
- font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
 
- padding: 0.9rem 1.8rem;
+  padding: 0.9rem 1.8rem;
 
- border-radius: 6px;
- cursor: pointer;
+  border-radius: 6px;
+  cursor: pointer;
 
- display: inline-flex;
- align-items: center;
- justify-content: center;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
 
- text-decoration: none;
+.Homepage-Hero-Buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
- transition:
-  background-color 0.2s ease,
-  color 0.2s ease,
-  border-color 0.2s ease,
-  transform 0.2s ease;
+  text-decoration: none;
 }
 
 /* Primary Button */
 .Primary-Button {
- background-color: var(--Yellow);
- color: black;
- border: 2px solid var(--Yellow);
+  background-color: var(--Green);
+  color: black;
+  border: 2px solid var(--Green);
 }
 
 .Primary-Button:hover {
- transform: translateY(-2px);
- filter: brightness(0.95);
+  transform: translateY(-2px);
+  filter: brightness(0.95);
 }
 
 /* Secondary Button */
 .Secondary-Button {
- background-color: transparent;
- color: #222831;
- border: 2px solid #222831;
+  background-color: transparent;
+  color: #222831;
+  border: 2px solid #222831;
 }
 
 .Secondary-Button:hover {
- background-color: #222831;
- color: white;
- transform: translateY(-2px);
+  background-color: #222831;
+  color: white;
+  transform: translateY(-2px);
 }
 
 /* mobile */
 @media only screen and (max-width: 700px) {
 
- .Homepage-Hero {
-  padding: 0 2rem;
- }
+  .Homepage-Hero {
+    padding: 0 2rem;
+  }
 
- .Homepage-Hero-Buttons {
-  flex-direction: column;
-  align-items: stretch;
- }
+  .Homepage-Hero-Buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
- .Homepage-Hero-Buttons button {
-  width: 100%;
- }
+  .Homepage-Hero-Buttons button {
+    width: 100%;
+  }
 }

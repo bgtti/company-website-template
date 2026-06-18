@@ -7,20 +7,15 @@
 
 :root {
  --Charcoal: #222831;
- /*Very dark blue-gray */
- --SlateGrey: #222831;
- /*Medium-dark gray with a blue tint */
- --Taupe: #948979;
- /*Muted brownish-gray */
- --Sand: #DFD0B8;
- /*Light warm cream-beige */
- --Yellow: #E8951A;
- --Yellow: #E0F51D;
+ /* --SlateGray: #222831;  */
+ --Gray: #a0a3a7;
+ --LightGray: #d5dbe3;
+ --Yellow: #e7ba26;
  --Green: #2CC94F;
 
  --Rosewood: #923641;
  --Burgundy: #0f0607;
- --BurgundyFilter: invert(3%) sepia(11%) saturate(4717%) hue-rotate(311deg) brightness(88%) contrast(98%);
+ --GrayFilter: invert(66%) sepia(6%) saturate(172%) hue-rotate(175deg) brightness(98%) contrast(91%);
 
  font-family: 'Inter', sans-serif;
 }
@@ -45,7 +40,7 @@ button {
 }
 
 a {
- color: var(--Taupe);
+ color: var(--Gray);
 }
 
 b {
@@ -113,7 +108,7 @@ button {
 }
 
 button:disabled {
- background-color: var(--Sand);
+ background-color: var(--LightGray);
  box-shadow: none;
 }
 
@@ -166,7 +161,7 @@ form>div {
 
 form>div>input,
 form>div>textarea {
- border: 1px solid var(--Sand);
+ border: 1px solid var(--LightGray);
  border-radius: 5px;
  padding: 10px;
 }
