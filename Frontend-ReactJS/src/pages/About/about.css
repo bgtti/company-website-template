@@ -1,0 +1,47 @@
+.About-Hero {
+ max-width: 900px;
+ margin: 0 auto;
+ padding: 6rem 2rem 4rem;
+ text-align: center;
+}
+
+.About-Hero h1 {
+ font-family: 'SpaceGrotesk', sans-serif;
+ font-size: clamp(2.5rem, 5vw, 4rem);
+ margin-bottom: 1rem;
+ color: #222831;
+}
+
+.About-Hero p {
+ font-size: 1.2rem;
+ color: #393E46;
+ max-width: 700px;
+ margin: 0 auto;
+}
+
+.About-Content {
+ max-width: 1000px;
+ margin: 0 auto;
+ padding: 0 2rem 5rem;
+}
+
+.About-Section {
+ margin-bottom: 4rem;
+}
+
+.About-Section h2 {
+ font-family: 'SpaceGrotesk', sans-serif;
+ margin-bottom: 1rem;
+ color: #222831;
+}
+
+.About-Section p,
+.About-Section li {
+ font-family: 'Inter', sans-serif;
+ line-height: 1.8;
+ color: #393E46;
+}
+
+.About-Section ul {
+ padding-left: 1.5rem;
+}

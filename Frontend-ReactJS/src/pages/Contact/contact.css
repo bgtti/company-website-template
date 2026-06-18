@@ -1,0 +1,9 @@
+.Occupation-Input {
+ display: none;
+}
+
+.Spam-Filter-Input {
+ border: 1px solid var(--Sand);
+ border-radius: 5px;
+ padding: 5px;
+}

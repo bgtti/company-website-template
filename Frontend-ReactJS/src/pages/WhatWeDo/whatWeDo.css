@@ -1,0 +1,58 @@
+.Services-Hero {
+ max-width: 900px;
+ margin: 0 auto;
+ padding: 5rem 2rem 3rem;
+ text-align: center;
+}
+
+.Services-Hero h1 {
+ font-family: 'SpaceGrotesk', sans-serif;
+ font-size: clamp(2.5rem, 5vw, 4rem);
+ color: #222831;
+ margin-bottom: 1rem;
+}
+
+.Services-Hero p {
+ font-family: 'Inter', sans-serif;
+ font-size: 1.2rem;
+ color: #393E46;
+}
+
+.Services-Container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 2rem 5rem;
+
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 2rem;
+}
+
+.Service-Card {
+ background: white;
+
+ border: 1px solid #E5E5E5;
+ border-radius: 8px;
+
+ padding: 2rem;
+
+ transition: transform 0.2s ease,
+  box-shadow 0.2s ease;
+}
+
+.Service-Card:hover {
+ transform: translateY(-4px);
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.Service-Card h2 {
+ font-family: 'SpaceGrotesk', sans-serif;
+ color: #222831;
+ margin-bottom: 1rem;
+}
+
+.Service-Card p {
+ font-family: 'Inter', sans-serif;
+ color: #393E46;
+ line-height: 1.7;
+}

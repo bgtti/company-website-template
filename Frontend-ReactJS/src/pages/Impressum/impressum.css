@@ -1,0 +1,28 @@
+.Legal-Container {
+ max-width: 900px;
+ margin: 0 auto;
+ padding: 4rem 2rem 6rem;
+}
+
+.Legal-Container h1 {
+ font-family: 'SpaceGrotesk', sans-serif;
+ font-size: clamp(2.5rem, 5vw, 4rem);
+ color: #222831;
+ margin-bottom: 3rem;
+}
+
+.Legal-Section {
+ margin-bottom: 2.5rem;
+}
+
+.Legal-Section h2 {
+ font-family: 'SpaceGrotesk', sans-serif;
+ color: #222831;
+ margin-bottom: 1rem;
+}
+
+.Legal-Section p {
+ font-family: 'Inter', sans-serif;
+ color: #393E46;
+ line-height: 1.8;
+}
