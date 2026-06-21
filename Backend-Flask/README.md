@@ -7,23 +7,21 @@
 
 <hr>
 
-![Preview of code editor](docs/readmeImages/App_BE_VScode.jpg)
+![Preview of code editor](app/static_readme/BE_VScode.jpg)
 <hr>
 
 # Table of Contents
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Code and organization](#code-and-organization)
-- [Api dococumentation](#api-documentation)
-- [Testing](#testing)
 - [The App](#the-app)
-- [Versioning and external resources](#versioning-and-external-resources)
 - [About and license](#about-and-license)
 <br>
 
 # Introduction
 
 A Flask backend with email functionality that receives contact form information from a website and sends the message to the admin's email address.
+Rate-limiter implemented to prevent abuse.
 
 # Installation
 
@@ -72,6 +70,7 @@ A Flask backend with email functionality that receives contact form information 
 
    >\
    > You can create a .env file in the root, the content should be similar to that of the .env.example file provided.
+   > Replace email credentials in .env file in order to use Flask-Mail.
    > 
    ><br/><br/>
 </details>
@@ -123,13 +122,7 @@ The JSON Schema used to validate the data against the expected format.
 
 This is a Flask Backend to receive contact form submissions from a website and send an email to the site's admin with the content of the submission.
 
-## App versions
-
 This is the project's version 1.
-
-## Suggested improvements
-
-Implementation of a rate limiter is recommended.
 
 # About and license
 
