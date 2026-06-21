@@ -19,6 +19,8 @@
 
 ![Preview of app](readmeAssets/App_preview_gif.gif)
 <hr>
+Live preview: https://bgtti.github.io/company-website-template
+<hr>
 
 # Table of Contents
 - [Introduction](#introduction)
