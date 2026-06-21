@@ -47,9 +47,10 @@ This project contains the base functionality and styling for:
 - Homepage
 - About page
 - What We Do / Services / Portfolio page
+- Contact page
 - Privacy Policy page
 - Impressum / Legal page
-- Contact page
+- 404 Page
 
 ## Tech Stack and Tools
 

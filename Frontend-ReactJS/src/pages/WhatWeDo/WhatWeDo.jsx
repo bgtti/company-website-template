@@ -130,8 +130,6 @@ function WhatWeDo() {
 
    </div>
 
-
-
   </section>
  )
 }

@@ -11,13 +11,16 @@ import WhatWeDo from "../pages/WhatWeDo/WhatWeDo";
 import Impressum from "../pages/Impressum/Impressum";
 import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
 import Contact from "../pages/Contact/Contact";
+import NotFound from "../pages/NotFound/NotFound";
 
 const Router = () => {
  //Loader
  const loaderDisplay = useSelector((state) => state.loader.display);
 
+ //ATTENTION: remove "basename="/company-website-template"" when deploying to own domain
+
  return (
-  <BrowserRouter>
+  <BrowserRouter basename="/company-website-template">
    {loaderDisplay ? <Loader></Loader> : ""}
    <Header />
    <Routes>
@@ -28,6 +31,7 @@ const Router = () => {
     <Route exact path="contact" element={<Contact />} />
     <Route exact path="impressum" element={<Impressum />} />
     <Route exact path="privacy-policy" element={<PrivacyPolicy />} />
+    <Route path="*" element={<NotFound />} />
    </Routes>
    <Footer />
   </BrowserRouter>

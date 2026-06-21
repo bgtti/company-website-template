@@ -29,6 +29,7 @@ This project contains the UI and styling for the following pages:
 - Contact page
 - Privacy Policy page
 - Impressum (Legal) page
+- 404 page
 
 This project is using the following extensions:
 - React Router for routing

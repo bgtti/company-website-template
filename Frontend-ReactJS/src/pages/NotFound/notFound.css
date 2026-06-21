@@ -1,0 +1,53 @@
+.NotFound-Container {
+ text-align: center;
+ padding: 2rem;
+ max-width: 700px;
+}
+
+.NotFound-Container h1 {
+ font-size: clamp(5rem, 15vw, 10rem);
+ color: var(--BlueDark);
+ margin-bottom: 0.5rem;
+}
+
+.NotFound-Container h2 {
+ margin-bottom: 1rem;
+}
+
+.NotFound-Container p {
+ color: var(--SlateGray);
+ margin-bottom: 2rem;
+}
+
+.NotFound-Button {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+
+ margin-top: 1.5rem;
+
+ padding: 0.9rem 1.8rem;
+
+ text-decoration: none;
+
+ font-family: 'Inter', sans-serif;
+ font-weight: 500;
+
+ border-radius: 6px;
+
+ background-color: var(--Blue);
+ color: white;
+
+ border: 2px solid var(--Blue);
+
+ transition:
+  background-color 0.2s ease,
+  transform 0.2s ease,
+  filter 0.2s ease;
+
+}
+
+.NotFound-Button:hover {
+ transform: translateY(-2px);
+ filter: brightness(0.95);
+}

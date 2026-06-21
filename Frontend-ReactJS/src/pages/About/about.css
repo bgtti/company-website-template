@@ -18,6 +18,12 @@
   padding: 0 2rem 5rem;
 }
 
+@media only screen and (min-width: 700px) {
+  .About-Content {
+    padding: 0 2rem 5rem;
+  }
+}
+
 .About-Section {
   margin-bottom: 3rem;
 }
@@ -76,10 +82,4 @@
 .About-CTA:hover {
   transform: translateY(-2px);
   filter: brightness(0.95);
-}
-
-@media only screen and (min-width: 700px) {
-  .About-Content {
-    padding: 0 2rem 5rem;
-  }
 }
