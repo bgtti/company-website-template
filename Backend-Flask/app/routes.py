@@ -4,6 +4,7 @@ routes.py contains the only route this project uses.
 from html import escape
 from flask import Blueprint, request, jsonify
 from flask_mail import Message as EmailMessage
+import logging
 
 from config import EMAIL_ADDRESS, EMAIL_PASSWORD, EMAIL_DEFAULT_SENDER, APP_NAME, RESERVED_DOMAINS
 from app import mail, limiter 
@@ -41,17 +42,19 @@ def contact():
 
     # Honeypot: silently reject bots
     if occupation:
+        logging.info("Honeypot triggered. Client IP: %s.", request.remote_addr)
         return jsonify({"response": True, "message": "Message sent successfully."}), 200
     
     # Email validation: prevent email header abuse
     email_domain = email.lower().split("@")[-1].strip()
 
     if email_domain in [domain.lower().strip() for domain in RESERVED_DOMAINS]:
+        logging.info("Route rejected submission with email in reserved domains list. Client IP: %s.", request.remote_addr)
         return jsonify({"response": False, "message": "Invalid email address."}), 400
 
     # Email sending
     if not EMAIL_ADDRESS or not EMAIL_PASSWORD:
-        print("Email credentials not provided. Unable to send email.")
+        logging.error("Email credentials not provided. Unable to send email.")
         return jsonify({"response": False, "message": "Message could not be sent."}), 500
     
     email_body = f"""
@@ -80,5 +83,5 @@ def contact():
         mail.send(new_email)
         return jsonify({"response": True, "message": "Message sent successfully."}), 200
     except Exception as e:
-        print("Email error:", e)
+        logging.exception(f"Error forwarding message from contact form. Details: {e}")
         return jsonify({"response": False, "message": "Message could not be sent."}), 500

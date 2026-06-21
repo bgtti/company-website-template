@@ -4,7 +4,6 @@ config.py is the configuration file used in run.py, the entry point of the app.
 import os
 from dotenv import load_dotenv
 import logging
-# import redis
 from flask import request, jsonify
 
 APP_NAME = "COMPANY WEBSITE TEMPLATE" #TODO: change to your app name

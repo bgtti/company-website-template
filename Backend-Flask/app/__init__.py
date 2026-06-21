@@ -3,7 +3,6 @@ __init__.py contains Flask extensions and Create App function.
 
 Make sure you have a .env file with the correct email credentials to be able to use the email sending feature.
 """
-
 from flask import Flask
 import ast
 import os
