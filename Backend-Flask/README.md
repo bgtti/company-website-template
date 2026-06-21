@@ -1,7 +1,7 @@
 <div align="center">
   <br>
-  <h1><b>Express App Registration Template</b></h1>
-  <strong>Express JS + MongoDB Back-end</strong>
+  <h1><b>Python/Flask BE for Website Contact Form Template</b></h1>
+  <strong>Flask + Redis (optional) Back-end</strong>
 </div>
 <br>
 

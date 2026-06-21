@@ -15,7 +15,6 @@
 - [Installation](#installation)
 - [Code and organization](#code-and-organization)
 - [The App](#the-app)
-- [Versioning and external resources](#versioning-and-external-resources)
 - [About and license](#about-and-license)
 <br>
 
@@ -27,9 +26,9 @@ This project contains the UI and styling for the following pages:
 - Homepage
 - About page
 - What We Do / Services / Portfolio page
+- Contact page
 - Privacy Policy page
 - Impressum (Legal) page
-- Contact page
 
 This project is using the following extensions:
 - React Router for routing

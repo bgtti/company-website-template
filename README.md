@@ -27,10 +27,9 @@
 - [Installation](#installation)
 - [Project Structure and Documentation](#project-structure-and-documentation)
    - [Frontend-ReactJS](#frontend-reactjs)
-   - [Backend-ExpressJS](#backend-expressjs)
+   - [Backend-Flask](#backend-flask)
    - [readmeAssets](#readmeassets)
 - [The App](#the-app)
-- [Versioning and branches](#versioning-and-branches)
 - [About and license](#about-and-license)
 <br>
 
@@ -58,8 +57,8 @@ This project contains the base functionality and styling for:
 
 - Flask-Mail – contact form forwarding
 - Json Schema – validation
-- TODO: Rate-limiter implementation
-- TODO: Redis implementation
+- Flask-limiter – rate-limiter
+- Redis – to be used with rate -limiter
 
 **Frontend:**
 
@@ -158,6 +157,9 @@ Plain CSS (no frameworks), UI built mobile-first.
    >});
    >//DELETE THIS PART ABOVE (SO EMAIL SENDING CAN WORK)
    >```
+   > 
+   >![Preview of code](readmeAssets/App_delete_FE_code.jpg)
+   > 
    ><br/>
 </details>
 
@@ -179,7 +181,7 @@ You can see detailed information about the the server and testing [in it's docum
 
 Contains the images used in this readme file.
 
-# The template
+# The app
 
 The apps contains basic website functionality and placeholder text/image thought to be used as a starter template in other Flask + React projects.
 Be certain to adapt the .env files and configuration data in both backend and front end prior to using.
