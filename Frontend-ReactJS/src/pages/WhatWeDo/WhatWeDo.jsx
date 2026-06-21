@@ -9,7 +9,13 @@ function WhatWeDo() {
  return (
   <section className="Main-Section">
 
-   <div className="Services-Hero">
+   {/* Metadata */}
+   <title>What we do</title>
+   <meta name="description" content="What we do" />
+
+   {/* Hero */}
+
+   <div className="Main-Page-Hero">
     <h1>What We Do</h1>
 
     <p>
@@ -17,10 +23,58 @@ function WhatWeDo() {
     </p>
    </div>
 
+   {/* Features */}
+   <div className="Service-Features">
+
+    <div className="Service-Feature-Card">
+     <div className="Service-Feature-Icon">⚡</div>
+     <h3>Fast Delivery</h3>
+     <p>
+      Efficient development processes that help bring
+      projects from idea to production quickly.
+     </p>
+    </div>
+
+    <div className="Service-Feature-Card">
+     <div className="Service-Feature-Icon">🔒</div>
+     <h3>Security</h3>
+     <p>
+      Modern development practices focused on reliability,
+      security, and maintainability.
+     </p>
+    </div>
+
+    <div className="Service-Feature-Card">
+     <div className="Service-Feature-Icon">🛠️</div>
+     <h3>Maintenance</h3>
+     <p>
+      Continuous support and maintenance to keep your
+      systems running smoothly.
+     </p>
+    </div>
+
+   </div>
+
+   <div className="Main-Page-Subhero">
+
+    <h2>Building Solutions That Last</h2>
+
+    <p>
+     We help businesses create, improve, and maintain
+     web solutions that are reliable, scalable, and
+     built according to modern development standards.
+     From company websites to custom web applications,
+     we focus on long-term quality rather than quick fixes.
+    </p>
+
+   </div>
+
+   {/* Services Cards */}
+
    <div className="Services-Container">
 
     <section className="Service-Card">
-     <h2>Website Development</h2>
+     <h3>Website Development</h3>
 
      <p>
       We create professional websites tailored to your business needs,
@@ -29,7 +83,7 @@ function WhatWeDo() {
     </section>
 
     <section className="Service-Card">
-     <h2>Web Applications</h2>
+     <h3>Web Applications</h3>
 
      <p>
       We develop custom web applications that automate processes,
@@ -38,7 +92,7 @@ function WhatWeDo() {
     </section>
 
     <section className="Service-Card">
-     <h2>Website Maintenance</h2>
+     <h3>Website Maintenance</h3>
 
      <p>
       We keep websites secure, updated, and operating smoothly through
@@ -47,7 +101,7 @@ function WhatWeDo() {
     </section>
 
     <section className="Service-Card">
-     <h2>API Integrations</h2>
+     <h3>API Integrations</h3>
 
      <p>
       We connect your systems with third-party services such as payment
@@ -57,7 +111,7 @@ function WhatWeDo() {
     </section>
 
     <section className="Service-Card">
-     <h2>Hosting & Deployment</h2>
+     <h3>Hosting & Deployment</h3>
 
      <p>
       We assist with infrastructure setup, cloud deployments,
@@ -66,7 +120,7 @@ function WhatWeDo() {
     </section>
 
     <section className="Service-Card">
-     <h2>Technical Consulting</h2>
+     <h3>Technical Consulting</h3>
 
      <p>
       We help businesses evaluate existing systems, identify
@@ -75,6 +129,8 @@ function WhatWeDo() {
     </section>
 
    </div>
+
+
 
   </section>
  )

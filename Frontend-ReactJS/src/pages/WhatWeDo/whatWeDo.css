@@ -1,58 +1,117 @@
-.Services-Hero {
- max-width: 900px;
- margin: 0 auto;
- padding: 5rem 2rem 3rem;
- text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.Services-Hero h1 {
- font-family: 'SpaceGrotesk', sans-serif;
- font-size: clamp(2.5rem, 5vw, 4rem);
- color: #222831;
- margin-bottom: 1rem;
+/* Shared Layout */
+
+.Service-Features,
+.Services-Container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  align-items: stretch;
 }
 
-.Services-Hero p {
- font-family: 'Inter', sans-serif;
- font-size: 1.2rem;
- color: #393E46;
+/* Features */
+
+.Service-Features {
+  margin-bottom: 1.5rem;
 }
+
+.Service-Feature-Card {
+  height: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: white;
+}
+
+.Service-Feature-Icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.Service-Feature-Card h3 {
+  font-family: 'SpaceGrotesk', sans-serif;
+  color: var(--BlueDark);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.Service-Feature-Card p {
+  font-family: 'Inter', sans-serif;
+  color: var(--SlateGray);
+  line-height: 1.7;
+}
+
+/* Service Cards */
 
 .Services-Container {
- max-width: 1200px;
- margin: 0 auto;
- padding: 0 2rem 5rem;
-
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
- gap: 2rem;
+  padding-bottom: 5rem;
 }
 
 .Service-Card {
- background: white;
+  height: 100%;
+  background: white;
+  border: 1px solid var(--Yellow);
+  border-radius: 8px;
+  padding: 1.5rem;
 
- border: 1px solid #E5E5E5;
- border-radius: 8px;
-
- padding: 2rem;
-
- transition: transform 0.2s ease,
-  box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .Service-Card:hover {
- transform: translateY(-4px);
- box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-.Service-Card h2 {
- font-family: 'SpaceGrotesk', sans-serif;
- color: #222831;
- margin-bottom: 1rem;
+.Service-Card h3 {
+  font-family: 'SpaceGrotesk', sans-serif;
+  font-weight: 700;
+  color: var(--BlueDark);
+  margin-bottom: 1rem;
 }
 
 .Service-Card p {
- font-family: 'Inter', sans-serif;
- color: #393E46;
- line-height: 1.7;
+  font-family: 'Inter', sans-serif;
+  color: var(--SlateGray);
+  line-height: 1.7;
+}
+
+/* Tablet and up */
+
+@media only screen and (min-width: 700px) {
+
+  .Service-Features,
+  .Services-Container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .Service-Features {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  }
+
+  .Services-Container {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    padding-top: 2rem;
+  }
+
+  .Service-Feature-Card,
+  .Service-Card {
+    padding: 2rem;
+  }
+
+  .Service-Introduction {
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }
 }

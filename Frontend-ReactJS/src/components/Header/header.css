@@ -1,46 +1,159 @@
 .NavBar {
  height: 70px;
  display: flex;
- justify-content: space-around;
+ justify-content: space-between;
  align-items: center;
+ padding: 0 1.5rem;
  position: relative;
+ z-index: 1000;
+ background: white;
 }
 
 .NavBar-AppName {
- font-family: 'Melodrama-Bold', sans-serif;
- font-size: 32px !important;
- color: var(--Chestnut);
+ font-family: 'SpaceGrotesk', sans-serif;
+ font-size: 32px;
+ font-weight: 700;
+ color: var(--BlueDark);
  text-decoration: none;
+ z-index: 1002;
 }
 
-@media only screen and (min-width:850px) {
- .NavBar-AppName {
-  font-size: 1.5em;
- }
+/* Burger */
+
+.NavBar-Burger {
+ width: 34px;
+ height: 28px;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+
+ appearance: none;
+ -webkit-appearance: none;
+
+ background: transparent;
+ border: none;
+ box-shadow: none;
+ outline: none;
+
+ cursor: pointer;
+ padding: 0;
+
+ z-index: 1002;
+}
+
+.NavBar-Burger span {
+ display: block;
+ width: 100%;
+ height: 3px;
+
+ background: var(--BlueDark);
+ border-radius: 999px;
+
+ transition:
+  transform 0.3s ease,
+  opacity 0.3s ease;
+}
+
+.NavBar-Burger.open span:nth-child(1) {
+ transform: translateY(12.5px) rotate(45deg);
+}
+
+.NavBar-Burger.open span:nth-child(2) {
+ opacity: 0;
+}
+
+.NavBar-Burger.open span:nth-child(3) {
+ transform: translateY(-12.5px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+
+.NavBar-Menu {
+ position: fixed;
+ inset: 0;
+
+ background: white;
+
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+ transform: translateX(100%);
+ transition: transform 0.3s ease;
+
+ z-index: 1001;
+}
+
+.NavBar-Menu.open {
+ transform: translateX(0);
 }
 
 .NavBar-Items {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+
  display: flex;
- gap: 20px;
+ flex-direction: column;
+ gap: 2rem;
+
+ text-align: center;
 }
 
-.NavBar-Items li a {
- font-family: 'Nunito-Bold', sans-serif;
- display: flex;
- font-weight: bold;
+.NavBar-Link {
+ font-family: 'SpaceGrotesk', sans-serif;
+ font-weight: 400;
  text-decoration: none;
  cursor: pointer;
- color: var(--Burgundy);
- font-size: 22px !important;
+ color: var(--SlateGray);
+ font-size: 2rem;
 }
 
-.NavBar-Items li a.active {
- color: var(--Olive);
+.NavBar-Link.active {
+ color: var(--BlueDark);
+ font-weight: 600;
 }
 
 @media (hover: hover) {
- .NavBar-Items li a:hover {
-  font-weight: bolder;
-  color: var(--Olive);
+ .NavBar-Link:hover {
+  color: var(--Blue);
+ }
+}
+
+/* Desktop */
+
+@media only screen and (min-width: 850px) {
+ .NavBar {
+  justify-content: space-around;
+  padding: 0;
+ }
+
+ .NavBar-AppName {
+  font-size: 1.5em;
+ }
+
+ .NavBar-Burger {
+  display: none;
+ }
+
+ .NavBar-Menu {
+  position: static;
+  inset: auto;
+
+  transform: none;
+  transition: none;
+
+  background: transparent;
+ }
+
+ .NavBar-Items {
+  flex-direction: row;
+  gap: 20px;
+ }
+
+ .NavBar-Link {
+  display: flex;
+  font-size: 22px;
  }
 }

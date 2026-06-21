@@ -2,8 +2,31 @@
  display: none;
 }
 
-.Spam-Filter-Input {
- border: 1px solid var(--Sand);
- border-radius: 5px;
- padding: 5px;
+.Contact-info-paragraph {
+ margin: 1.5rem 0;
+}
+
+.Contact-h2 {
+ color: var(--SlateGray);
+}
+
+.Contact-info-paragraph p {
+ color: var(--SlateGray);
+ margin-bottom: 0.3rem;
+}
+
+.Spam-Filter-Div {
+ display: flex;
+ align-items: center;
+ gap: 0.75rem;
+}
+
+.Spam-Filter-Div input {
+ flex: 1;
+}
+
+.Spam-Filter-Div span {
+ white-space: nowrap;
+ color: var(--SlateGray);
+ font-weight: 600;
 }

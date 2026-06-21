@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from "react-redux";
 import { APP_NAME } from "../../config_variables.js";
-import "./header.css"
+import "./header.css";
 
 /**
  * Component returns nav component.
@@ -11,21 +10,56 @@ import "./header.css"
  */
 function Header() {
 
+ const [menuOpen, setMenuOpen] = useState(false);
+
+ const navLinkClass = ({ isActive }) =>
+  isActive ? "NavBar-Link active" : "NavBar-Link";
+
+ const closeMenu = () => {
+  setMenuOpen(false);
+ };
+
  return (
-  <nav className="NavBar" role="navigation" aria-labelledby="firstLabel" aria-label="Primary">
-   <NavLink to="/" className="NavBar-AppName">
+  <nav className="NavBar" role="navigation" aria-label="Primary">
+   <NavLink to="/" className="NavBar-AppName" onClick={closeMenu}>
     {APP_NAME}
    </NavLink>
-   <div>
 
+   <button
+    className={`NavBar-Burger ${menuOpen ? "open" : ""}`}
+    type="button"
+    aria-label={menuOpen ? "Close menu" : "Open menu"}
+    aria-expanded={menuOpen}
+    onClick={() => setMenuOpen(prev => !prev)}
+   >
+    <span></span>
+    <span></span>
+    <span></span>
+   </button>
+
+   <div className={`NavBar-Menu ${menuOpen ? "open" : ""}`}>
     <ul className="NavBar-Items">
-     <li><NavLink to="/">Home</NavLink></li>
-     <li><NavLink to="/about">About</NavLink></li>
-     <li><NavLink to="/contact">Contact</NavLink></li>
-     <li><NavLink to="/what-we-do">What We Do</NavLink></li>
+     <li>
+      <NavLink className={navLinkClass} to="/" end onClick={closeMenu}>
+       Home
+      </NavLink>
+     </li>
+     <li>
+      <NavLink className={navLinkClass} to="/what-we-do" onClick={closeMenu}>
+       What We Do
+      </NavLink>
+     </li>
+     <li>
+      <NavLink className={navLinkClass} to="/about" onClick={closeMenu}>
+       About
+      </NavLink>
+     </li>
+     <li>
+      <NavLink className={navLinkClass} to="/contact" onClick={closeMenu}>
+       Contact
+      </NavLink>
+     </li>
     </ul>
-
-
    </div>
   </nav>
  );

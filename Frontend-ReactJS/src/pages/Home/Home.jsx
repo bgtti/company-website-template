@@ -12,7 +12,8 @@ function Home() {
    {/* Metadata */}
    <title>Homepage</title>
 
-   {/* Component: Homepage Image*/}
+   {/* Homepage Image*/}
+
    <div className="Homepage-Image">
     <div className="Homepage-Hero">
      <h1>Website Development and Maintenance Services</h1>
@@ -23,7 +24,7 @@ function Home() {
 
      <div className="Homepage-Hero-Buttons">
       <Link
-       to="/services"
+       to="/what-we-do"
        className="Secondary-Button"
       >
        Learn More
@@ -39,6 +40,7 @@ function Home() {
 
     </div>
    </div>
+
   </section>
  )
 }

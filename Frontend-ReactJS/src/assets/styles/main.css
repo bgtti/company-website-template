@@ -6,12 +6,15 @@
 @import url('fontSpaceGrotesk.css');
 
 :root {
+ --Red: #C71A25;
+ --BlueDark: #043873;
+ --Blue: #4F9CF9;
  --Charcoal: #222831;
- /* --SlateGray: #222831;  */
+ --SlateGray: #393E46;
  --Gray: #a0a3a7;
  --LightGray: #d5dbe3;
- --Yellow: #e7ba26;
- --Green: #2CC94F;
+
+ --Yellow: #FBC343;
 
  --Rosewood: #923641;
  --Burgundy: #0f0607;
@@ -59,6 +62,12 @@ h1 {
  margin: 5px 0;
 }
 
+h2 {
+ font-family: 'SpaceGrotesk', sans-serif;
+ font-size: clamp(2rem, 4vw, 3rem);
+ color: var(--Charcoal);
+}
+
 label,
 input,
 textarea {
@@ -92,12 +101,12 @@ textarea:focus {
 button {
  font-weight: 600;
  letter-spacing: 1px;
- padding: 7px 25px;
- background-color: var(--Yellow);
+ padding: 10px 25px;
+ background-color: var(--Blue);
  border: none;
  border-radius: 7px;
  box-shadow: #0f06076b 0px 7px 20px 0px;
- color: var(--Burgundy);
+ color: white;
  cursor: pointer;
 }
 
@@ -121,35 +130,46 @@ button:disabled {
  align-items: center;
 }
 
-/* FORMS: SIGNUP + LOGIN */
+/* FORMS: contact */
 
 .Main-Form-Container {
- margin: 0 20px;
- padding: 20px !important;
- border-radius: 5px;
+ width: calc(100% - 2rem);
+ max-width: 650px;
+ margin: 0 auto 4rem;
+ padding: 1.5rem;
+
+ border-radius: 8px;
  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
- padding: 10px;
- min-width: 500px;
- width: 85%;
+}
+
+@media only screen and (min-width:700px) {
+ .Main-Form-Container {
+  max-width: 85%;
+ }
 }
 
 @media only screen and (min-width:1000px) {
  .Main-Form-Container {
-  min-width: 500px;
-  max-width: 30%;
+  max-width: 600px;
+  padding: 2rem;
+ }
+
+ form button {
+  width: auto;
+  align-self: flex-start;
  }
 }
 
 form {
  display: flex;
  flex-direction: column;
- gap: 20px;
+ gap: 1.25rem;
 }
 
 form>div {
  display: flex;
  flex-direction: column;
- gap: 10px
+ gap: 0.5rem;
 }
 
 @media only screen and (min-width:1000px) {
@@ -159,47 +179,88 @@ form>div {
  }
 }
 
-form>div>input,
-form>div>textarea {
+form input,
+form textarea {
+ width: 100%;
+ max-width: 100%;
  border: 1px solid var(--LightGray);
  border-radius: 5px;
- padding: 10px;
+ padding: 0.75rem;
+}
+
+form textarea {
+ resize: vertical;
 }
 
 @media only screen and (min-width:1000px) {
 
  form>div>input,
+ form>div>div>input,
  form>div>textarea {
   padding: 5px;
  }
 }
 
-form>div>label {
+form label {
  font-weight: bold;
+}
+
+form button {
+ width: 100%;
+ margin-top: 0.5rem;
 }
 
 .Main-Form-Checkbox {
  font-weight: normal;
 }
 
-/* Delete button */
-.Main-Form-Delete-Btn {
- background-color: var(--Rosewood);
- color: white;
+
+/*HERO COMPONENT (title and subtitle)*/
+.Main-Page-Hero {
+ max-width: 900px;
+ margin: 0 auto;
+ padding: 4rem 1.5rem 2.5rem;
+ text-align: center;
 }
 
-/*DASHBOARD PAGE*/
-.Main-Dashboard-Content {
- margin: 20px;
- display: flex;
- flex-direction: column;
- gap: 25px;
+.Main-Page-Hero h1 {
+ font-family: 'SpaceGrotesk', sans-serif;
+ font-size: clamp(2.5rem, 5vw, 4rem);
+ color: var(--Charcoal);
+ margin-bottom: 1rem;
 }
 
-/* TERMS PAGE */
-.Main-Text-Container {
- margin: 20px;
- display: flex;
- flex-direction: column;
- gap: 10px;
+.Main-Page-Hero p {
+ font-family: 'Inter', sans-serif;
+ font-size: clamp(1rem, 2vw, 1.2rem);
+ color: var(--SlateGray);
+ line-height: 1.7;
+}
+
+@media only screen and (min-width: 700px) {
+ .Main-Page-Hero {
+  padding: 5rem 2rem 3rem;
+ }
+}
+
+/* SUBHERO component (secondary title and description on a page) */
+.Main-Page-Subhero {
+ max-width: 900px;
+ margin: 1rem auto;
+ padding: 0 1.5rem;
+ text-align: center;
+}
+
+.Main-Page-Subhero h2 {
+ font-family: 'SpaceGrotesk', sans-serif;
+ font-size: clamp(2rem, 4vw, 3rem);
+ color: var(--Charcoal);
+ margin-bottom: 1.5rem;
+}
+
+.Main-Page-Subhero p {
+ font-family: 'Inter', sans-serif;
+ color: var(--SlateGray);
+ line-height: 1.8;
+ font-size: clamp(1rem, 2vw, 1.1rem);
 }

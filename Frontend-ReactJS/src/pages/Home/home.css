@@ -1,6 +1,6 @@
 /*
-Source: Image by Bruno from Pixabay
-available at: https://pixabay.com/photos/spices-cook-spice-up-ingredients-3811731/
+Image source: Image by Apex Digital Agency from Pixabay
+available at: https: //pixabay.com/photos/website-web-design-development-code-8305451/
 */
 .Homepage-Image {
   position: relative;
@@ -11,7 +11,7 @@ available at: https://pixabay.com/photos/spices-cook-spice-up-ingredients-381173
   background-image: url("../../assets/images/homepage_picture.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 76%;
+  background-position: 1%;
 
   display: flex;
   align-items: center;
@@ -22,7 +22,7 @@ available at: https://pixabay.com/photos/spices-cook-spice-up-ingredients-381173
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.80);
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .Homepage-Hero {
@@ -30,16 +30,16 @@ available at: https://pixabay.com/photos/spices-cook-spice-up-ingredients-381173
   z-index: 1;
 
   max-width: 700px;
-  padding: 0 10%;
+  padding: 0 2rem;
 }
 
 .Homepage-Hero h1 {
   font-family: 'SpaceGrotesk', sans-serif;
   font-size: clamp(2.5rem, 5vw, 5rem);
   font-weight: 700;
-  color: #222831;
+  color: var(--Charcoal);
 
-  border-left: 6px solid var(--Green);
+  border-left: 6px solid var(--Blue);
   padding-left: 10px;
   margin-bottom: 1rem;
 }
@@ -48,21 +48,28 @@ available at: https://pixabay.com/photos/spices-cook-spice-up-ingredients-381173
   font-family: 'Inter', sans-serif;
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   font-weight: 400;
-  color: #393E46;
-
+  color: var(--SlateGray);
   line-height: 1.6;
 }
 
-/* BUTTONS */
+/* Buttons */
 
 .Homepage-Hero-Buttons {
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
   gap: 1rem;
   margin-top: 2rem;
-  flex-wrap: wrap;
 }
 
 .Homepage-Hero-Buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  box-sizing: border-box;
+
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -71,6 +78,7 @@ available at: https://pixabay.com/photos/spices-cook-spice-up-ingredients-381173
 
   border-radius: 6px;
   cursor: pointer;
+  text-decoration: none;
 
   transition:
     background-color 0.2s ease,
@@ -79,19 +87,11 @@ available at: https://pixabay.com/photos/spices-cook-spice-up-ingredients-381173
     transform 0.2s ease;
 }
 
-.Homepage-Hero-Buttons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  text-decoration: none;
-}
-
 /* Primary Button */
 .Primary-Button {
-  background-color: var(--Green);
-  color: black;
-  border: 2px solid var(--Green);
+  background-color: var(--Blue);
+  color: white;
+  border: 2px solid var(--Blue);
 }
 
 .Primary-Button:hover {
@@ -102,29 +102,31 @@ available at: https://pixabay.com/photos/spices-cook-spice-up-ingredients-381173
 /* Secondary Button */
 .Secondary-Button {
   background-color: transparent;
-  color: #222831;
-  border: 2px solid #222831;
+  color: var(--SlateGray);
+  border: 2px solid var(--SlateGray);
 }
 
 .Secondary-Button:hover {
-  background-color: #222831;
+  background-color: var(--BlueDark);
+  border-color: var(--BlueDark);
   color: white;
   transform: translateY(-2px);
 }
 
-/* mobile */
-@media only screen and (max-width: 700px) {
+/* Tablet and up */
 
+@media only screen and (min-width: 700px) {
   .Homepage-Hero {
-    padding: 0 2rem;
+    padding: 0 10%;
   }
 
   .Homepage-Hero-Buttons {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
-  .Homepage-Hero-Buttons button {
-    width: 100%;
+  .Homepage-Hero-Buttons a {
+    width: auto;
   }
 }
