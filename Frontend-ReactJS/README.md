@@ -48,7 +48,7 @@ This project is using the following extensions:
    > ```pwsh
    >cd Frontend-ReactJS
    >```
-   ><br/><br/>
+   ><br/>
 </details>
 
 <details>
@@ -60,7 +60,7 @@ This project is using the following extensions:
    > ```pwsh
    >npm install
    >```
-   ><br/><br/>
+   ><br/>
 </details>
 
 <details>
@@ -71,7 +71,23 @@ This project is using the following extensions:
    > ```pwsh
    >npm run dev
    >```
-   ><br/><br/>
+   ><br/>
+</details>
+
+<details>
+   <summary>4. Enable the API handler</summary>
+
+   >\
+   >Navigate to `Frontend-ReactJS/src/api/handlers/contactSubmission.js` and delete the following code:
+   > ```pwsh
+   >//DELETE THIS PART BELLOW (BACKEND DE-ACTIVATION)
+   >return Promise.resolve({
+   >  response: true,
+   >  message: "Message sent successfully."
+   >});
+   >//DELETE THIS PART ABOVE (SO EMAIL SENDING CAN WORK)
+   >```
+   ><br/>
 </details>
 
 

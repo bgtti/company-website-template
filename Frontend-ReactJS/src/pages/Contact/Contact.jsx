@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 import { INPUT_LENGTH } from "../../utils/constants.js";
 import { setLoader } from '../../redux/loaderSlice.js';
@@ -17,7 +16,6 @@ import "./contact.css"
  */
 function Contact() {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const isComponentMounted = useIsComponentMounted();
 
   const [formData, setFormData] = useState({
@@ -72,7 +70,7 @@ function Contact() {
 
     sendMessage(requestData)
       .then(res => {
-        if (isComponentMounted) {
+        if (isComponentMounted()) {
           if (res.response) { setSuccess("Message sent successfully!"); }
           else { setError(res.message); }
         }
@@ -119,6 +117,7 @@ function Contact() {
               <b>Name *</b>
             </label>
             <input
+              autoComplete="name"
               type="text"
               name="name"
               id="name"
@@ -168,6 +167,7 @@ function Contact() {
           <div>
             <label htmlFor="subject">Subject *</label>
             <input
+              autoComplete="off"
               type="text"
               name="subject"
               id="subject"
@@ -200,7 +200,10 @@ function Contact() {
 
             <div className="Spam-Filter-Div">
               <input
-                type="number"
+                autoComplete="off"
+                inputMode="numeric"
+                pattern="[0-9]{4}"
+                type="text"
                 name="spamFilter"
                 id="spamFilter"
                 placeholder="Enter number on the right"

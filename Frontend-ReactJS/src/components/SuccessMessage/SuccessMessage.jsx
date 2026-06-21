@@ -34,7 +34,7 @@ function SuccessMessage(props) {
                 <p className="Main-Form-Success-Exclamation">!</p>
             </div>
             <div className="Main-Form-Success-Warning">
-                <p>
+                <p className="Main-Form-Success-Success">
                     <i>
                         <b>Success!</b>
                     </i>

@@ -7,7 +7,12 @@
 <table align="center" style="border-collapse:separate;">
   <tr>
     <td style="background: #344955; border-radius:20px; border: 5px solid transparent"><small>React JS</small></td>
+    <td style="background: #344955; border-radius:20px"><small>Vite</small></td>
+    <td style="background: #344955; border-radius:20px"><small>Redux</small></td>
     <td style="background: #344955; border-radius:20px"><small>Python Flask</small></td>
+    <td style="background: #344955; border-radius:20px"><small>Flask Mail</small></td>
+    <td style="background: #344955; border-radius:20px"><small>Flask Limiter</small></td>
+    <td style="background: #344955; border-radius:20px"><small>Redis</small></td>
   </tr>
 </table>
 <hr>
@@ -75,7 +80,7 @@ Plain CSS (no frameworks), UI built mobile-first.
 
    >\
    > More information on how to clone this repository [available here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
-   ><br/><br/>
+   ><br/>
 </details>
 
 <details>
@@ -86,7 +91,7 @@ Plain CSS (no frameworks), UI built mobile-first.
    > 
    >![Preview of opening in terminal](readmeAssets/App_open_in_terminal.jpg)
    >
-   ><br/><br/>
+   ><br/>
 </details>
 
 <details>
@@ -108,16 +113,16 @@ Plain CSS (no frameworks), UI built mobile-first.
    >cd Frontend-ReactJS
    >npm install
    >```
-   ><br/><br/>
+   ><br/>
 </details>
 
 <details>
    <summary>3. Create an env file</summary>
 
    >\
-   > You can create a .env file in the root of the `Backend-Flask` folder, the content should be similar to that of the .env.example file provided.
+   > You can create a .env file in the root of the `Backend-Flask` folder, the content should be similar to that of the `.env.example` file provided. Replace the email credentials as indicated.
    > 
-   ><br/><br/>
+   ><br/>
 </details>
 
 <details>
@@ -135,9 +140,26 @@ Plain CSS (no frameworks), UI built mobile-first.
    > 
    >![Preview of terminal](readmeAssets/App_terminal.jpg)
    > 
-   ><br/><br/>
+   ><br/>
 </details>
 <br/>
+
+<details>
+   <summary>5. Enable the FE API handler</summary>
+
+   >\
+   >To test the email feature, you should first enable requests from the front end's API handler.
+   >Navigate to `Frontend-ReactJS/src/api/handlers/contactSubmission.js` and delete the following code:
+   > ```pwsh
+   >//DELETE THIS PART BELLOW (BACKEND DE-ACTIVATION)
+   >return Promise.resolve({
+   >  response: true,
+   >  message: "Message sent successfully."
+   >});
+   >//DELETE THIS PART ABOVE (SO EMAIL SENDING CAN WORK)
+   >```
+   ><br/>
+</details>
 
 # Project Structure and Documentation
 

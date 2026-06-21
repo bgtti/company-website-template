@@ -3,8 +3,8 @@
  margin: 5px 0 15px 0;
  padding: 5px;
  border-radius: 5px;
- border: 2px solid var(--Olive);
- color: var(--Olive);
+ border: 2px solid var(--BlueDark);
+ color: var(--Blue);
  display: flex;
  flex-direction: row;
  align-items: center;
@@ -12,12 +12,31 @@
 }
 
 .Main-Form-Success-Exclamation {
- font-family: 'Melodrama-Medium', sans-serif;
+ font-family: 'Inter', sans-serif;
  font-size: 3em;
+ color: var(--BlueDark);
 }
 
 .Main-Form-Success-Warning {
  display: flex;
  flex-direction: column;
  gap: 5px;
+}
+
+.Main-Form-Error-Warning p {
+ font-size: 1em;
+}
+
+.Main-Form-Success-Success {
+ color: var(--BlueDark);
+}
+
+@media only screen and (min-width:700px) {
+ .Main-Form-Error-Exclamation {
+  font-size: 3em;
+ }
+
+ .Main-Form-Error-Warning p {
+  font-size: 1em;
+ }
 }

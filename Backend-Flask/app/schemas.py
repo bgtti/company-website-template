@@ -10,7 +10,7 @@ INPUT_LENGTH = {
         "maxValue": 320
     },
     "occupation":{ # Honeypot field
-        "minValue": 1,
+        "minValue": 0,
         "maxValue": 200
     },
     "subject":{

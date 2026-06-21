@@ -17,7 +17,7 @@ import { BASE_BACKEND_URL } from "../config_variables"
 export const api = axios.create({
  baseURL: BASE_BACKEND_URL,
  timeout: 5000,
- withCredentials: true,
+ withCredentials: false,
  headers: {
   'Accept': 'application/json',
   'Content-Type': 'application/json',

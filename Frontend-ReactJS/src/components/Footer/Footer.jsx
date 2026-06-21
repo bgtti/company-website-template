@@ -21,7 +21,7 @@ function Footer() {
 
    <div className="Footer-Copyright">
     {/* <p>© 2026 Company Name. All rights reserved.</p> */}
-    <p>2025 by</p>
+    <p>2026 by</p>
     <a href="https://github.com/bgtti" target="_blank" rel="noopener noreferrer">
      <img src={GithubIcon} alt="github repo" />
     </a>

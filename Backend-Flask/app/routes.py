@@ -6,7 +6,7 @@ from flask import Blueprint, request, jsonify
 from flask_mail import Message as EmailMessage
 
 from config import EMAIL_ADDRESS, EMAIL_PASSWORD, EMAIL_DEFAULT_SENDER, APP_NAME, RESERVED_DOMAINS
-from app import mail #instance of Flask-Mail initialized in __init__.py
+from app import mail, limiter 
 
 # Json Schema
 from app.custom_decorator import validate_schema
@@ -16,7 +16,7 @@ main = Blueprint("main", __name__)
 
 
 @main.post("/api/contact")
-# @limiter.limit("10/day")
+@limiter.limit("10/day;5/hour")
 @validate_schema(contact_form_schema)
 def contact():
     """
@@ -35,7 +35,8 @@ def contact():
     name = escape(json_data["name"])
     email = escape(json_data["email"])
     subject = escape(json_data["subject"])
-    message = escape(json_data["message"])
+    raw_message = json_data["message"]
+    message = escape(raw_message).replace("\r\n", "\n").replace("\n", "<br>")
     occupation = json_data.get("occupation", None) # Honeypot field
 
     # Honeypot: silently reject bots
@@ -54,7 +55,7 @@ def contact():
         return jsonify({"response": False, "message": "Message could not be sent."}), 500
     
     email_body = f"""
-    <b>{APP_NAME} New Contact Form Message received.</b><br>
+    <b>{APP_NAME}: New Contact Form Message received.</b><br>
     ********************************************************************<br>
     <b>Sender name:</b> {name}<br>
     <b>Sender email:</b> {email}<br>

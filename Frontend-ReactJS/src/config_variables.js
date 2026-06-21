@@ -4,7 +4,7 @@
  * 
 */
 
-export const BASE_BACKEND_URL = "http://localhost:3000"
+export const BASE_BACKEND_URL = "http://localhost:5000"
 export const APP_NAME = "App Name"
 export const RESERVED_DOMAINS = ["example.com", "test.com", "invalid.com"] // For email validation in contact form. Domains that are not allowed for user email input. Add your app's domain here.
 
